@@ -12,12 +12,20 @@ import java.util.Date;
 import java.util.List;
 
 public class Atm {
-
+    
+    // static final, load once use whenever you want
     ConsoleLogger logger = new ConsoleLogger();
+    // same
     AtmService service = new AtmService();
     Card theCard = null;
 
     private double balance = 10000;
+    
+    // you can create private consturctor,
+    // initialize balance inside constructor
+    // create method which return instance of this class
+    // we will discuss it next time
+    // prepare your questions
 
 
 
@@ -31,6 +39,9 @@ public class Atm {
 
 
     // Method which parses card.xml and account.xml and returns a random card
+    // In order to get random card you shold pare xml each time, this is not good idea
+    // READ SOLID - Single responsibility
+    // And next time tell me why this is a not good approach
     public Card load () {
         ConsoleLogger logger = new ConsoleLogger();
 
@@ -42,7 +53,9 @@ public class Atm {
 
         // Parsing accounts from xml and creating account holder's data in banks
         List<Account> accountList;
-
+       // I hate this approach, what if I have to test you task in Linux and I have to run your project under linux
+       // I am forced to change the path, because I don't have D:\\ .. in linux
+       // Use classLoader and load resource as a stream
         accountList = accountParser.parse("D:\\Tonoyan S\\Programming\\Projects\\Atm\\src\\com\\egs\\accounts.xml");
 
         for (int i = 0; i < accountList.size(); i++) {
@@ -116,4 +129,7 @@ public class Atm {
             }
         }
     }
+    
+    // you can create private method in order to get file, and remove duplicates
+    // if you need to use it inside other classes, you can create FileReaderManager for example
 }
