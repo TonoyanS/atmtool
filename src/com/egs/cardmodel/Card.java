@@ -7,6 +7,8 @@ import java.util.Date;
 
 public class Card implements Validation {
 
+    // Good, always use final references if they wont be changed
+    // Remeber when you use final referenc you should initialize it
     private final long personID;
     private final String cardNumber;
     private final CardBrand cardBrand;
@@ -94,6 +96,7 @@ public class Card implements Validation {
         private String cardHolder;
         private Date expiryDate;
 
+        // Good approach
         public CardBuilder personID (final long personID) {
             this.personID = personID;
             return this;
@@ -160,7 +163,7 @@ public class Card implements Validation {
             return new Card(this);
         }
     }
-
+// where is you custom toString, not mandatory but would be nice to have own toString style for all inputs inside project
 }
 
 
