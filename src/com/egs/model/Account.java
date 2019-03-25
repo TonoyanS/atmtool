@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 
 public class Account implements Validation {
 
+    // Why do you use holderId? You have used it on Bank side as a key of map
     // The AccountHolder's id, who owns this account
     private long holderID;
 
@@ -55,8 +56,11 @@ public class Account implements Validation {
         boolean isNull = false;
 
         // Setting class fields to array
+        //final Field[] decalredFields
+        // don't use reflexin
         Field[] declaredFields = objectToValidate.getClass().getDeclaredFields();
 
+        // final Field field
         for(Field field : declaredFields) {
 
             try {
@@ -66,7 +70,10 @@ public class Account implements Validation {
                     try {
                         isNull = true;
                         throw new MandatoryFieldException(objectToValidate.getClass().getName()+"."+field.getName());
-                    } catch (MandatoryFieldException e) {
+                    } 
+                    // final MandatoryFieldException e
+                    catch (MandatoryFieldException e) {
+                        // use logger
                         e.printStackTrace();
                     }
                 }
