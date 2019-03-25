@@ -18,6 +18,7 @@ public class AtmService {
         String cardNumber = theCard.getCardNumber();
         long cardHolderId = theCard.getPersonID();
 
+        // debug instead of info
         logger.info("Sending request to " + bankName + " to withdraw money: " + amount);
 
         Bank theBank = IssuerBank.valueOf(bankName).getInstance();
@@ -67,4 +68,7 @@ public class AtmService {
 
         return false;
     }
+    
+    // to much long method, split to small private methods
+    // I am just checking the structure. The Logic will be discussed during lesson
 }
