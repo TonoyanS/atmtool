@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cards>
+    <card>
+        <personid>0</personid>
+        <cardnumber>515462</cardnumber>
+        <cardbrand>AMEX</cardbrand>
+        <currency>AMD</currency>
+        <issuerbank>AMERIA</issuerbank>
+        <cardholder>SERGEY TONOYAN</cardholder>
+        <expiredate>05/12/2019</expiredate>
+    </card>
+    <card>
+        <personid>1</personid>
+        <cardnumber>79658261</cardnumber>
+        <cardbrand>MASTER</cardbrand>
+        <currency>USD</currency>
+        <issuerbank>HSBC</issuerbank>
+        <cardholder>ARMEN TONOYAN</cardholder>
+        <expiredate>15/5/2019</expiredate>
+    </card>
+    <card>
+        <personid>2</personid>
+        <cardnumber>9586421364</cardnumber>
+        <cardbrand>VISA</cardbrand>
+        <currency>EUR</currency>
+        <issuerbank>EVOCA</issuerbank>
+        <cardholder>ARTEM TONOYAN</cardholder>
+        <expiredate>25/10/2020</expiredate>
+    </card>
+</cards>
