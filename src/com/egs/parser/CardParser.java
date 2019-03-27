@@ -1,8 +1,8 @@
 package com.egs.parser;
 
-import com.egs.cardmodel.Card;
-import com.egs.cardmodel.CardBrand;
-import com.egs.cardmodel.Currency;
+import com.egs.model.Card;
+import com.egs.enums.CardBrand;
+import com.egs.enums.Currency;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -11,8 +11,8 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,16 +23,19 @@ import java.util.List;
 public class CardParser implements Parser{
 
     @Override
-    public List<Card> parse(String path) throws ParseException {
+    public List<Card> parse(final String fileName) throws ParseException {
 
         List<Card> cardList = new ArrayList<>();
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Document document = null;
 
+        InputStream exportFileInputStream =
+                getClass().getClassLoader().getResourceAsStream("com/egs/resources/" + fileName);
+
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            document = builder.parse(new File(path));
+            document = builder.parse(exportFileInputStream);
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -1,6 +1,5 @@
-package com.egs.bankmodel;
+package com.egs.model;
 
-import com.egs.model.Account;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;

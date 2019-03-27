@@ -1,8 +1,6 @@
 package com.egs.model;
 
-import com.egs.bankmodel.Bank;
-import com.egs.bankmodel.IssuerBank;
-import com.egs.cardmodel.Card;
+import com.egs.enums.IssuerBank;
 import com.egs.logging.ConsoleLogger;
 import com.egs.parser.AccountParser;
 import com.egs.parser.CardParser;
@@ -12,22 +10,25 @@ import java.util.Date;
 import java.util.List;
 
 public class Atm {
-    
-    // static final, load once use whenever you want
-    ConsoleLogger logger = new ConsoleLogger();
-    // same
-    AtmService service = new AtmService();
+
+    private final static ConsoleLogger logger = new ConsoleLogger();
+    private final static AtmService service = new AtmService();
+    private final static CardParser parser = new CardParser();
+    private final static AccountParser accountParser = new AccountParser();
+    private static List<Card> cardList;
     Card theCard = null;
 
-    private double balance = 10000;
-    
-    // you can create private consturctor,
-    // initialize balance inside constructor
+    private double balance;
+
+    public Atm() {
+        balance = 10000;
+        loadAccounts();
+        parseCards();
+    }
+
     // create method which return instance of this class
     // we will discuss it next time
     // prepare your questions
-
-
 
     public double getBalance() {
         return balance;
@@ -37,65 +38,65 @@ public class Atm {
         this.balance = balance;
     }
 
-
-    // Method which parses card.xml and account.xml and returns a random card
-    // In order to get random card you shold pare xml each time, this is not good idea
-    // READ SOLID - Single responsibility
-    // And next time tell me why this is a not good approach
-    public Card load () {
-        ConsoleLogger logger = new ConsoleLogger();
-
-        CardParser parser = new CardParser();
-        AccountParser accountParser = new AccountParser();
+    public void loadAccounts () {
 
         Bank theBank;
         Account account;
 
         // Parsing accounts from xml and creating account holder's data in banks
         List<Account> accountList;
-       // I hate this approach, what if I have to test you task in Linux and I have to run your project under linux
-       // I am forced to change the path, because I don't have D:\\ .. in linux
-       // Use classLoader and load resource as a stream
-        accountList = accountParser.parse("D:\\Tonoyan S\\Programming\\Projects\\Atm\\src\\com\\egs\\accounts.xml");
+
+        accountList = accountParser.parse("accounts.xml");
 
         for (int i = 0; i < accountList.size(); i++) {
 
             account = accountList.get(i);
-
-            if (account.validateForNulls(account))
-                System.exit(0);
-
+            account.validate();
 
             theBank = IssuerBank.valueOf(account.getIssuerBank()).getInstance();
-
             theBank.addBankCustomerAccount(theBank,account.getHolderID(),account);
-
         }
-        logger.info("Accounts have been added");
+        logger.debug("Accounts have been added");
+    }
+
+    public void parseCards () {
 
         // Parsing cards and taking random one
-        int a = (int) (Math.random() * 3);
-
         try {
-            theCard = parser.parse("D:\\Tonoyan S\\Programming\\Projects\\Atm\\src\\com\\egs\\cards.xml").get(a);
 
-            if (!theCard.validateForNulls(theCard)) {
-                logger.info("Card is taken, ID: " + a);
-            } else {
-                System.exit(0);
-            }
+            cardList = parser.parse("cards.xml");
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
+    }
+
+
+    // Getting a random card
+    public Card getRandomCard () {
+
+        int a = (int) (Math.random() * 3);
+
+        theCard = cardList.get(a);
+
+        theCard.validate();
+
+        logger.debug("Card is taken, ID: " + a);
+
         return theCard;
     }
+
+
 
     // Validating ATM balance
     public boolean validateBalance (double amount) {
 
         if (amount <= this.balance) {
-            logger.info("ATM have enough money");
+            logger.debug("ATM have enough money");
             return true;
+        } else {
+            logger.debug("ATM haven't enough money");
+            System.out.println("Service problem");
         }
         return false;
     }
@@ -107,10 +108,12 @@ public class Atm {
 
         if (currentDate.after(card.getExpiryDate())) {
 
+            logger.debug("Card date is expired");
+            System.out.println("Your card is expired");
             return false;
         }
 
-        logger.info("Card is in date");
+        logger.debug("Card is on term");
         return true;
     }
 
@@ -118,8 +121,7 @@ public class Atm {
     public void getCash(double amount) {
 
         if (validateBalance(amount)) {
-            load();
-
+            getRandomCard();
             if (validateExpiryDate(theCard)) {
 
                 if (service.request(theCard,amount)) {
@@ -129,7 +131,4 @@ public class Atm {
             }
         }
     }
-    
-    // you can create private method in order to get file, and remove duplicates
-    // if you need to use it inside other classes, you can create FileReaderManager for example
 }

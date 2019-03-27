@@ -9,5 +9,6 @@ public class Starter {
         Atm atm = new Atm();
 
         atm.getCash(2000);
+
     }
 }

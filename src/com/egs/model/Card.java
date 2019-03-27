@@ -1,14 +1,15 @@
-package com.egs.cardmodel;
+package com.egs.model;
 
+import com.egs.enums.CardBrand;
+import com.egs.enums.Currency;
 import com.egs.customexceptions.MandatoryFieldException;
+import com.egs.logging.ConsoleLogger;
 import com.egs.validation.Validation;
 import java.lang.reflect.Field;
 import java.util.Date;
 
 public class Card implements Validation {
 
-    // Good, always use final references if they wont be changed
-    // Remeber when you use final referenc you should initialize it
     private final long personID;
     private final String cardNumber;
     private final CardBrand cardBrand;
@@ -16,6 +17,8 @@ public class Card implements Validation {
     private final String issuerBank;
     private final String cardHolder;
     private final Date expiryDate;
+
+    final static ConsoleLogger logger = new ConsoleLogger();
 
     // Constructor for card
     public Card(final CardBuilder cardBuilder) {
@@ -57,31 +60,33 @@ public class Card implements Validation {
         return expiryDate;
     }
 
+
     // Validate implementation for Card
     @Override
-    public boolean validateForNulls(Object objectToValidate) {
+    public void validate() {
 
         // Setting class fields to array
-        Field[] declaredFields = objectToValidate.getClass().getDeclaredFields();
-        boolean isNull = false;
+        final Field[] declaredFields = this.getClass().getDeclaredFields();
 
-        for(Field field : declaredFields) {
+        for(final Field field : declaredFields) {
 
             try {
+
                 // if our field is null or empty throwing MandatoryField Exception
-                if (field.get(objectToValidate) == null || field.get(objectToValidate).equals("")) {
+                if (field.get(this) == null || field.get(this).equals("")) {
                     try {
-                        isNull = true;
-                        throw new MandatoryFieldException(objectToValidate.getClass().getName()+"."+field.getName());
-                    } catch (MandatoryFieldException e) {
-                        e.printStackTrace();
+                        throw new MandatoryFieldException(this.getClass().getName()+"."+field.getName());
+                    }
+
+                    catch (final MandatoryFieldException e) {
+                        logger.error("Field is null or Empty",e);
+                        System.exit(0);
                     }
                 }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
         }
-        return isNull;
     }
 
 
@@ -163,7 +168,18 @@ public class Card implements Validation {
             return new Card(this);
         }
     }
-// where is you custom toString, not mandatory but would be nice to have own toString style for all inputs inside project
+
+    @Override
+    public String toString() {
+        return "Card - " +
+                "Person ID: " + personID +
+                ", card number: " + cardNumber +
+                ", card brand: " + cardBrand +
+                ", currency: " + currency +
+                ", issuer bank: " + issuerBank +
+                ", card holder: " + cardHolder +
+                ", expiry date: " + expiryDate;
+    }
 }
 
 

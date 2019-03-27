@@ -1,23 +1,27 @@
 package com.egs.model;
 
 import com.egs.customexceptions.MandatoryFieldException;
+import com.egs.logging.ConsoleLogger;
 import com.egs.validation.Validation;
 import java.lang.reflect.Field;
 
 public class Account implements Validation {
 
     // Why do you use holderId? You have used it on Bank side as a key of map
+
     // The AccountHolder's id, who owns this account
-    private long holderID;
+    private final long holderID;
 
     // The bank where is registered account
-    private String issuerBank;
+    private final String issuerBank;
 
     // Card number that is connected with this account
-    private String cardNumber;
+    private final String cardNumber;
 
     // Account's current balance
     private double balance;
+
+    private final static ConsoleLogger logger = new ConsoleLogger();
 
     public long getHolderID() {
         return holderID;
@@ -51,37 +55,37 @@ public class Account implements Validation {
 
     // Validate implementation for Account
     @Override
-    public boolean validateForNulls(Object objectToValidate) {
-
-        boolean isNull = false;
+    public void validate() {
 
         // Setting class fields to array
-        //final Field[] decalredFields
-        // don't use reflexin
-        Field[] declaredFields = objectToValidate.getClass().getDeclaredFields();
+        final Field[] declaredFields = this.getClass().getDeclaredFields();
 
-        // final Field field
-        for(Field field : declaredFields) {
+        for(final Field field : declaredFields) {
 
             try {
 
                 // if our field is null or empty throwing MandatoryField Exception
-                if (field.get(objectToValidate) == null || field.get(objectToValidate).equals("")) {
+                if (field.get(this) == null || field.get(this).equals("")) {
                     try {
-                        isNull = true;
-                        throw new MandatoryFieldException(objectToValidate.getClass().getName()+"."+field.getName());
-                    } 
-                    // final MandatoryFieldException e
-                    catch (MandatoryFieldException e) {
-                        // use logger
-                        e.printStackTrace();
+                        throw new MandatoryFieldException(this.getClass().getName()+ "." + field.getName());
+                    }
+                    catch (final MandatoryFieldException e) {
+                        logger.error("Field is Null or Empty",e);
+                        System.exit(0);
                     }
                 }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
         }
-        return isNull;
     }
 
+    @Override
+    public String toString() {
+        return "Account - " +
+                "Holder ID: " + holderID +
+                ", issuer bank: " + issuerBank +
+                ", card number: " + cardNumber +
+                ", balance: " + balance;
+    }
 }

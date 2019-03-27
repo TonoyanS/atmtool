@@ -9,23 +9,27 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AccountParser implements Parser{
 
     @Override
-    public List<Account> parse(String path) {
+    public List<Account> parse(final String fileName) {
 
         List<Account> accountList = new ArrayList<>();
         Document document = null;
 
+        InputStream exportFileInputStream =
+                getClass().getClassLoader().getResourceAsStream("com/egs/resources/" + fileName);
+
+
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            document = builder.parse(new File(path));
+            document = builder.parse(exportFileInputStream);
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -48,7 +52,6 @@ public class AccountParser implements Parser{
                     eElement.getElementsByTagName("cardnumber").item(0).getTextContent(),
                     Double.valueOf(eElement.getElementsByTagName("balance").item(0).getTextContent())));
         }
-
         return accountList;
     }
 }

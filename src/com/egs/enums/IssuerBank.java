@@ -1,4 +1,9 @@
-package com.egs.bankmodel;
+package com.egs.enums;
+
+import com.egs.banks.AmeriaBank;
+import com.egs.model.Bank;
+import com.egs.banks.EvocaBank;
+import com.egs.banks.HsbcBank;
 
 public enum IssuerBank {
 

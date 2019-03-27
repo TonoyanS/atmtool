@@ -1,4 +1,6 @@
-package com.egs.bankmodel;
+package com.egs.banks;
+
+import com.egs.model.Bank;
 
 public class EvocaBank extends Bank {
 
