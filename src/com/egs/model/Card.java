@@ -18,7 +18,7 @@ public class Card implements Validation {
     private final String cardHolder;
     private final Date expiryDate;
 
-    final static ConsoleLogger logger = new ConsoleLogger();
+    final static ConsoleLogger logger = new ConsoleLogger(Card.class.getName());
 
     // Constructor for card
     public Card(final CardBuilder cardBuilder) {
@@ -63,7 +63,7 @@ public class Card implements Validation {
 
     // Validate implementation for Card
     @Override
-    public void validate() {
+    public void validate() throws MandatoryFieldException {
 
         // Setting class fields to array
         final Field[] declaredFields = this.getClass().getDeclaredFields();
@@ -74,18 +74,24 @@ public class Card implements Validation {
 
                 // if our field is null or empty throwing MandatoryField Exception
                 if (field.get(this) == null || field.get(this).equals("")) {
-                    try {
-                        throw new MandatoryFieldException(this.getClass().getName()+"."+field.getName());
-                    }
 
-                    catch (final MandatoryFieldException e) {
-                        logger.error("Field is null or Empty",e);
-                        System.exit(0);
-                    }
+                        throw new MandatoryFieldException(this.getClass().getName()+"."+field.getName());
+
                 }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
+        }
+
+        Date currentDate = new Date();
+
+        if (currentDate.after(getExpiryDate())) {
+
+            logger.debug("Card date is expired");
+            System.out.println("Your card is expired");
+            System.exit(0);
+        } else {
+        logger.debug("Card is on term");
         }
     }
 

@@ -7,8 +7,6 @@ import java.lang.reflect.Field;
 
 public class Account implements Validation {
 
-    // Why do you use holderId? You have used it on Bank side as a key of map
-
     // The AccountHolder's id, who owns this account
     private final long holderID;
 
@@ -21,7 +19,7 @@ public class Account implements Validation {
     // Account's current balance
     private double balance;
 
-    private final static ConsoleLogger logger = new ConsoleLogger();
+    private final static ConsoleLogger logger = new ConsoleLogger(Account.class.getName());
 
     public long getHolderID() {
         return holderID;
@@ -55,7 +53,7 @@ public class Account implements Validation {
 
     // Validate implementation for Account
     @Override
-    public void validate() {
+    public void validate() throws MandatoryFieldException {
 
         // Setting class fields to array
         final Field[] declaredFields = this.getClass().getDeclaredFields();
@@ -66,13 +64,9 @@ public class Account implements Validation {
 
                 // if our field is null or empty throwing MandatoryField Exception
                 if (field.get(this) == null || field.get(this).equals("")) {
-                    try {
+
                         throw new MandatoryFieldException(this.getClass().getName()+ "." + field.getName());
-                    }
-                    catch (final MandatoryFieldException e) {
-                        logger.error("Field is Null or Empty",e);
-                        System.exit(0);
-                    }
+
                 }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();

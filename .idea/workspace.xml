@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef1c4ea-f72e-400a-829a-9a6385487805" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/egs/resources/persons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/Starter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/logging/ConsoleLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/logging/ConsoleLogger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Atm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Atm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Card$CardBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Card$CardBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/model/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/parser/CardParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/resources/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/resources/accounts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/resources/cards.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atm/com/egs/service/AtmService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atm/com/egs/service/AtmService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/customexceptions/MandatoryFieldException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/customexceptions/MandatoryFieldException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/logging/ConsoleLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/logging/ConsoleLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/model/Atm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/model/Atm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/model/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/model/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/parser/CardParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/resources/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/resources/accounts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/resources/cards.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/egs/service/AtmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/egs/service/AtmService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,79 +37,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/parser/CardParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="32" column="97" selection-start-line="32" selection-start-column="97" selection-end-line="32" selection-end-column="97" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/egs/model/Atm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1767">
-              <caret line="104" column="45" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="45" />
+            <state relative-caret-position="627">
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/Starter.java">
+        <entry file="file://$PROJECT_DIR$/src/com/egs/service/InitService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/resources/cards.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/enums/CardBrand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/enums/IssuerBank.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/banks/HsbcBank.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/service/AtmService.java">
+        <entry file="file://$PROJECT_DIR$/src/com/egs/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+            <state relative-caret-position="228">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,19 +75,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/validation/Validation.java">
+        <entry file="file://$PROJECT_DIR$/src/com/egs/model/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/egs/resources/accounts.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="608">
+              <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/egs/model/Person.java" />
         <option value="$PROJECT_DIR$/src/com/egs/cardModel/cardBrand.java" />
         <option value="$PROJECT_DIR$/src/com/egs/cardModel/Currency.java" />
         <option value="$PROJECT_DIR$/src/com/egs/banks/AmeriaBank.java" />
@@ -145,7 +118,6 @@
         <option value="$PROJECT_DIR$/src/com/egs/banks/IssuerBank.java" />
         <option value="$PROJECT_DIR$/src/com/egs/logging/ILogger.java" />
         <option value="$PROJECT_DIR$/src/com/egs/parser/Iparser.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/logging/ConsoleLogger.java" />
         <option value="$PROJECT_DIR$/src/com/egs/parser/SaxParser.java" />
         <option value="$PROJECT_DIR$/src/com/egs/banks/BankFactory.java" />
         <option value="$PROJECT_DIR$/src/com/egs/parser/ParserImpl.java" />
@@ -160,21 +132,26 @@
         <option value="$PROJECT_DIR$/src/com/egs/cardModel/Card.java" />
         <option value="$PROJECT_DIR$/src/com/egs/accounts.xml" />
         <option value="$PROJECT_DIR$/src/com/egs/enums/IssuerBank.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/model/Bank.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/customexceptions/MandatoryFieldException.java" />
         <option value="$PROJECT_DIR$/src/com/egs/validation/Validation.java" />
         <option value="$PROJECT_DIR$/src/com/egs/enums/CardBrand.java" />
         <option value="$PROJECT_DIR$/src/com/egs/cards.xml" />
+        <option value="$PROJECT_DIR$/src/com/egs/resources/accounts.xml" />
+        <option value="$PROJECT_DIR$/src/com/egs/resources/cards.xml" />
+        <option value="$PROJECT_DIR$/src/com/egs/model/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/service/AtmService.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/logging/ConsoleLogger.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/model/Bank.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/model/Card.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/parser/AccountParser.java" />
         <option value="$PROJECT_DIR$/src/com/egs/parser/Parser.java" />
         <option value="$PROJECT_DIR$/src/com/egs/parser/CardParser.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/model/Card.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/Starter.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/model/Account.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/parser/AccountParser.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/service/AtmService.java" />
-        <option value="$PROJECT_DIR$/src/com/egs/resources/cards.xml" />
-        <option value="$PROJECT_DIR$/src/com/egs/resources/accounts.xml" />
+        <option value="$PROJECT_DIR$/src/com/egs/parser/PersonParser.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/customexceptions/MandatoryFieldException.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/model/ThreadPerson.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/service/InitService.java" />
         <option value="$PROJECT_DIR$/src/com/egs/model/Atm.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/model/Person.java" />
+        <option value="$PROJECT_DIR$/src/com/egs/Starter.java" />
       </list>
     </option>
   </component>
@@ -281,8 +258,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553684219905" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../homeTasks/egs-installator" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553889419931" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="D:/Downloads/Opera Downloads/Atm" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -365,6 +346,16 @@
       <workItem from="1553676501593" duration="2831000" />
       <workItem from="1553679605295" duration="4652000" />
       <workItem from="1553684318234" duration="17000" />
+      <workItem from="1553693966179" duration="6555000" />
+      <workItem from="1553706450499" duration="13142000" />
+      <workItem from="1553763658449" duration="2451000" />
+      <workItem from="1553843356858" duration="4933000" />
+      <workItem from="1553858870314" duration="1333000" />
+      <workItem from="1553866487190" duration="6847000" />
+      <workItem from="1553882703385" duration="6510000" />
+      <workItem from="1553942233875" duration="658000" />
+      <workItem from="1553982610512" duration="727000" />
+      <workItem from="1554048775414" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="ATM 1.1">
       <created>1553684186552</created>
@@ -377,12 +368,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101588000" />
+    <option name="totallyTimeSpent" value="144814000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15302013" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20201342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -391,16 +391,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.308311" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.5978552" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287037" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297587" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.308311" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -412,6 +412,37 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19140625" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.034722224" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287037" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297587" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.308311" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -459,6 +490,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/banks/HsbcBank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/resources/accounts.xsd" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="91" column="10" selection-start-line="91" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/banks/EvocaBank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/egs/banks/AmeriaBank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -466,17 +519,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/banks/EvocaBank.java">
+    <entry file="file://$PROJECT_DIR$/src/com/egs/enums/CardBrand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="38">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/customexceptions/MandatoryFieldException.java">
+    <entry file="file://$PROJECT_DIR$/src/com/egs/enums/IssuerBank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -487,10 +540,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/javax/xml/parsers/DocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-786">
+          <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/org/w3c/dom/NodeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/org/w3c/dom/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1433">
+          <caret line="189" column="20" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/resources/persons.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/egs/logging/ConsoleLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="513">
+          <caret line="34" column="67" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#error#0;class#ConsoleLogger#0" />
@@ -505,30 +586,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/model/Bank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/egs/model/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1185">
-          <caret line="82" column="39" lean-forward="true" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+        <state relative-caret-position="855">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/resources/accounts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="89" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/parser/CardParser.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/egs/model/Bank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -537,10 +626,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/egs/parser/AccountParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="133">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="445" column="24" lean-forward="true" selection-start-line="445" selection-start-column="24" selection-end-line="445" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/customexceptions/MandatoryFieldException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -555,20 +662,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/parser/CardParser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/egs/model/ThreadPerson.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/egs/service/AtmService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="32" column="97" selection-start-line="32" selection-start-column="97" selection-end-line="32" selection-end-column="97" />
+        <state relative-caret-position="209">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/parser/PersonParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/validation/Validation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/egs/model/Atm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="104" column="45" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="45" />
+        <state relative-caret-position="627">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/service/InitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/egs/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -577,62 +724,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/egs/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/resources/cards.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/enums/CardBrand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/enums/IssuerBank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/validation/Validation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/resources/accounts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/banks/HsbcBank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/egs/service/AtmService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        <state relative-caret-position="228">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

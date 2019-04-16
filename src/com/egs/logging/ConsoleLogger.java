@@ -6,8 +6,10 @@ import java.util.Date;
 public class ConsoleLogger implements Logger {
 
     private String dateFormat;
+    private String className;
 
-    public ConsoleLogger() {
+    public ConsoleLogger(String className) {
+        this.className = className;
         SimpleDateFormat dateFormatPattern = new SimpleDateFormat();
         dateFormat = dateFormatPattern.format(new Date());
     }
@@ -30,6 +32,6 @@ public class ConsoleLogger implements Logger {
 
     @Override
     public void debug(String message) {
-        System.err.println("DEBUG | " + dateFormat + " | " + message + "\n");
+        System.err.println(dateFormat + " " + className + "\nDEBUG: "  + message + "\n");
     }
 }
