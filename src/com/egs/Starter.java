@@ -10,7 +10,6 @@ public class Starter {
 
     public static void main(String[] args) {
 
-        Object test =  new Object();
 
         InitService initService = new InitService();
         try {
@@ -22,43 +21,33 @@ public class Starter {
         Atm atm = new Atm();
 
 
-        Thread firstThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
+        Thread firstThread = new Thread(() -> {
 
-                Person sergey = initService.getRandomPerson();
+            Person sergey = initService.getRandomPerson();
 
-                Card theCard = null;
+            Card theCard = null;
 
-//                synchronized (test) {
-                try {
-                     theCard = sergey.getRandomCard();
-                } catch (MandatoryFieldException e) {
-                    e.printStackTrace();
-                }
-                atm.getCash(theCard,2000);
-//                test.notify();
-//                }
+            try {
+                 theCard = sergey.getRandomCard();
+            } catch (MandatoryFieldException e) {
+                e.printStackTrace();
             }
+            atm.getCash(theCard,2000);
         });
 
 
-        Thread secondThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
+        Thread secondThread = new Thread(() -> {
 
-                Person ako = initService.getRandomPerson();
+            Person ako = initService.getRandomPerson();
 
-                Card theCard = null;
+            Card theCard = null;
 
-                    try {
-//                        test.wait();
-                    theCard = ako.getRandomCard();
-                } catch (MandatoryFieldException e) {
-                    e.printStackTrace();
-                }
-                    atm.getCash(theCard,1200);
+                try {
+                theCard = ako.getRandomCard();
+            } catch (MandatoryFieldException e) {
+                e.printStackTrace();
             }
+                atm.getCash(theCard,1200);
         });
 
         firstThread.setName("Sergey");

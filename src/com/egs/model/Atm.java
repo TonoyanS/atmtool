@@ -38,9 +38,9 @@ public class Atm {
 
 
     // Method which gets money from ATM
-    public void getCash(Card theCard, double amount) {
+    public synchronized void getCash(Card theCard, double amount) {
 
-
+        LOGGER.debug(theCard.getCardHolder() + " withdraws money.");
             if (validateBalance(amount)) {
 
                 if (ATM_SERVICE.request(theCard, amount)) {
