@@ -51,7 +51,7 @@ public class Starter {
         });
 
         firstThread.setName("Sergey");
-        secondThread.setName("Ako");
+        secondThread.setName("Hakob");
         secondThread.start();
         firstThread.start();
 
