@@ -38,12 +38,12 @@ public class Starter {
 
         Thread secondThread = new Thread(() -> {
 
-            Person ako = initService.getRandomPerson();
+            Person hakob = initService.getRandomPerson();
 
             Card theCard = null;
 
                 try {
-                theCard = ako.getRandomCard();
+                theCard = hakob.getRandomCard();
             } catch (MandatoryFieldException e) {
                 e.printStackTrace();
             }
